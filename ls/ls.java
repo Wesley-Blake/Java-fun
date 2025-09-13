@@ -7,14 +7,11 @@ import java.io.IOException;
 public class ls {
 	public static void main (String[] args) {
 		if (args.length == 0) {
-			String[] newArgs = new String[args.length +1];
-			System.arraycopy(args, 0, newArgs, 0, args.length);
-			newArgs[args.length] = ".";
+			args = new String[]{Paths.get("").toAbsolutePath().toString()};
 		}
-
 		for (String arg : args) {
 			Path path = Paths.get(arg);
-			System.out.println(path + ":");
+			System.out.println(path.getFileName() + ":");
 			if (Files.exists(path) && Files.isDirectory(path)) {
 				try(DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
 					for (Path entry : stream) {
