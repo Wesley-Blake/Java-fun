@@ -7,7 +7,8 @@ import java.io.IOException;
 public class ls {
 	public static void main (String[] args) {
 		if (args.length == 0) {
-			args = new String[]{Paths.get("").toAbsolutePath().toString()};
+			args = new String[]{Paths.get("")
+				.toAbsolutePath().toString()};
 		}
 		for (String arg : args) {
 			Path path = Paths.get(arg);
