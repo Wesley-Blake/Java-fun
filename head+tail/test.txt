@@ -1,0 +1,13 @@
+1. eggs
+2. eggs
+3. soda
+4. bread
+5. eggs
+6. soda
+7. bread
+8. eggs
+9. soda
+10. bread
+11. soda
+12. bread
+end list
